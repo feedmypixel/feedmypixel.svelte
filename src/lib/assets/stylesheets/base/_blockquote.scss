@@ -1,0 +1,11 @@
+@use 'sass:math';
+@use '../settings/vars' as *;
+@use '../tools/media-query' as *;
+
+blockquote {
+  margin: math.div($gutter, 2) 0 $gutter math.div($gutter, 4);
+
+  @include media-query(medium) {
+    margin: $gutter 0 $gutter * 2 math.div($gutter, 2);
+  }
+}

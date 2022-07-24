@@ -1,0 +1,36 @@
+@use '../settings/vars' as *;
+
+// Remove the gap between following elements and the bottom of their containers:
+// https://github.com/h5bp/html5-boilerplate/issues/440
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+// https://sarasoueidan.com/blog/svg-style-inheritance-and-FOUSVG/
+svg {
+  width: $baseline;
+  height: $baseline;
+  color: currentColor;
+}
+
+path {
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+img {
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+// non fluid images
+img[width],
+img[height] {
+  max-width: none;
+}

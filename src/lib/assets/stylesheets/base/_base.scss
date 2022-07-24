@@ -1,0 +1,67 @@
+@use '../settings/colours' as *;
+@use '../settings/vars' as *;
+@use '../tools/media-query' as *;
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%; // http://alistapart.com/article/howtosizetextincss
+  letter-spacing: 0.2px;
+  line-height: 1.7;
+  color: $grey-1;
+
+  @include media-query(large) {
+    font-size: 110%;
+  }
+
+  @include media-query(huge) {
+    font-size: 120%;
+  }
+}
+
+// TODO change font
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: poppins, helvetica neue, helvetica, arial, sans-serif;
+  text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+ul,
+ol,
+dd,
+p,
+pre,
+table,
+fieldset,
+hr {
+  margin-top: 0; /* stylelint-disable-line property-blacklist */
+  margin-bottom: $baseline;
+}
+
+// Remove text-shadow in selection highlight: https://twitter.com/miketaylr/status/12228805301
+::selection {
+  background: $blue;
+  text-shadow: none;
+}

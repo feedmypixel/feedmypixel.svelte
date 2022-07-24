@@ -1,0 +1,37 @@
+@use 'sass:math';
+@use '../settings/vars' as *;
+@use '../tools/media-query' as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: inline-block;
+  margin-bottom: math.div($gutter, 2);
+}
+
+h1 {
+  font-size: $font-36;
+
+  @include media-query(medium) {
+    font-size: $font-48;
+  }
+}
+
+h2 {
+  font-size: $font-24;
+
+  @include media-query(medium) {
+    font-size: $font-30;
+  }
+}
+
+h3 {
+  font-size: $font-18;
+
+  @include media-query(medium) {
+    font-size: $font-24;
+  }
+}

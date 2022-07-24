@@ -1,0 +1,15 @@
+$breakpoints: (
+  medium: 740px,
+  large: 980px,
+  huge: 1280px,
+  massive: 1440px,
+  mega: 1920px
+);
+
+@mixin media-query($breakpoint, $mediaType: screen) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{$mediaType} and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+}

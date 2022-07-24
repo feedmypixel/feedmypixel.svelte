@@ -1,0 +1,8 @@
+<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" aria-labelledby="fmp-logo-title fmp-logo-description">
+    <title id="fmp-logo-title">feedMyPixel Ltd.</title>
+    <desc id="fmp-logo-description">Crafted Software.</desc>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#2996EB" d="M0 0h30v30H0z"/>
+        <path fill="#FFF" d="M2 2h4v4H2zM8 2h4v4H8z"/>
+    </g>
+</svg>
