@@ -1,6 +1,17 @@
 {
   "name": "feedmypixel.svelte",
+  "description": "Website for feedMyPixel Ltd.",
+  "author": "Ben Chidgey <ben@feedmypixel.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feedmypixel/feedmypixel.svelte.git"
+  },
   "version": "0.0.1",
+  "type": "module",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "build:global:css": "sass --no-source-map src/lib/assets/stylesheets/app.scss static/app.css",
     "predev": "npm run build:global:css",
@@ -37,6 +48,5 @@
     "tslib": "^2.3.1",
     "typescript": "^4.7.4",
     "vite": "^3.0.0"
-  },
-  "type": "module"
+  }
 }

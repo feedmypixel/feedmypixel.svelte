@@ -1,6 +1,7 @@
+// TODO this file needs updating and checking over
 @use 'sass:math';
-@use '../settings/colours';
-@use '../settings/vars';
+@use '../settings/colour' as *;
+@use '../settings/vars' as *;
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
@@ -87,14 +88,14 @@ dfn {
 
 // Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari, Chrome.
 h1 {
-  font-size: vars.$baseFont * 2;
-  margin-bottom: vars.$baseline;
+  font-size: $baseFont * 2;
+  margin-bottom: $baseline;
 }
 
 // Address styling not present in IE 8/9.
 mark {
-  background: colours.$yellow;
-  color: colours.$grey-1;
+  background: $yellow;
+  color: $grey-1;
 }
 
 // Address inconsistent and variable font size in all browsers.
@@ -112,11 +113,11 @@ sup {
 }
 
 sup {
-  top: -(math.div(vars.$baseline, 2));
+  top: -(math.div($baseline, 2));
 }
 
 sub {
-  bottom: -(math.div(vars.$baseline, 4));
+  bottom: -(math.div($baseline, 4));
 }
 
 // Remove border when inside `a` element in IE 8/9/10.
@@ -141,7 +142,7 @@ kbd,
 pre,
 samp {
   font-family: monospace, monospace;
-  font-size: vars.$baseFont;
+  font-size: $baseFont;
 }
 
 // Known limitation: by default, Chrome and Safari on OS X allow very limited  styling of `select`, unless a `border`

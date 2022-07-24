@@ -10,6 +10,7 @@ const file = fileURLToPath(new URL('package.json', import.meta.url));
 const json = readFileSync(file, 'utf8');
 const packageJson = JSON.parse(json);
 
+/** @type {UserConfigExport} */
 const config = defineConfig({
   preprocess: sveltePreprocess({
     typescript: true,
@@ -19,7 +20,7 @@ const config = defineConfig({
           rootValue: 16,
           unitPrecision: 5,
           selectorBlackList: [],
-          replace: true,
+          replace: false,
           mediaQuery: true,
           minPixelValue: 0,
           propWhiteList: [
